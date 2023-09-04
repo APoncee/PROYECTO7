@@ -1,0 +1,70 @@
+# do PROYECTO.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:18:58 on Sep 04,2023
+# vcom -work work PROYECTO.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package altera_lnsim_components
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity PROYECTO
+# -- Compiling architecture structure of PROYECTO
+# End time: 04:18:58 on Sep 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:18:58 on Sep 04,2023
+# vcom -work work Waveform7.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PROYECTO_vhd_vec_tst
+# -- Compiling architecture PROYECTO_arch of PROYECTO_vhd_vec_tst
+# End time: 04:18:58 on Sep 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.PROYECTO_vhd_vec_tst 
+# Start time: 04:18:58 on Sep 04,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.proyecto_vhd_vec_tst(proyecto_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading altera_lnsim.altera_lnsim_components
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.proyecto(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_clkena(behavior)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# Loading cyclonev.cyclonev_mac(behavior)
+# Loading cyclonev.cyclonev_ram_block(block_arch)
+# Loading sv_std.std
+# Loading altera_lnsim.generic_m10k
+# Loading altera_lnsim.altera_lnsim_functions
+# Loading altera_lnsim.common_28nm_ram_block
+# Loading altera_lnsim.common_28nm_ram_register
+# Loading altera_lnsim.common_28nm_ram_pulse_generator
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /proyecto_vhd_vec_tst/i1/\inst24|Mult0~8\/inst/<protected> File: nofile
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /proyecto_vhd_vec_tst/i1/\inst24|Mult0~8\/inst/<protected> File: nofile
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /proyecto_vhd_vec_tst/i1/\inst25|Mult0~8\/inst/<protected> File: nofile
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /proyecto_vhd_vec_tst/i1/\inst25|Mult0~8\/inst/<protected> File: nofile
+# ** Warning: Design size of 44697 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#34
+# End time: 04:18:58 on Sep 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5

@@ -1,0 +1,545 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ERROR",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CH1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[11]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[10]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CH0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "NO_LLENAR",
+					"strict" : false
+				},
+				{
+					"name" : "ALARMA",
+					"strict" : false
+				},
+				{
+					"name" : "VALVULA_ON",
+					"strict" : false
+				},
+				{
+					"name" : "VALVULA_OFF",
+					"strict" : false
+				},
+				{
+					"name" : "EVENTO",
+					"strict" : false
+				},
+				{
+					"name" : "FIN",
+					"strict" : false
+				},
+				{
+					"name" : "TEMP_ALTA",
+					"strict" : false
+				},
+				{
+					"name" : "TEMP_BAJA",
+					"strict" : false
+				},
+				{
+					"name" : "CARGADO",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_CS_N",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DIN",
+					"strict" : false
+				},
+				{
+					"name" : "TiempoFull",
+					"strict" : false
+				},
+				{
+					"name" : "PWM_N_OUT_LED",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CH2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PWM_OUT_VALVULA",
+					"strict" : false
+				},
+				{
+					"name" : "C1HZ",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[11]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[10]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CH3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[11]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[10]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CH4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[11]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[10]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CH5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[11]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[10]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CH6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[11]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[10]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CH7[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Resetn",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DOUT",
+					"strict" : false
+				},
+				{
+					"name" : "CargarRam",
+					"strict" : false
+				},
+				{
+					"name" : "FINALIZAR",
+					"strict" : false
+				},
+				{
+					"name" : "Consultar",
+					"strict" : false
+				},
+				{
+					"name" : "START",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,29 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Potentiometer_ADC is
+    Port ( clk : in STD_LOGIC;
+           pot_signal : in STD_LOGIC_VECTOR(7 downto 0);
+           mapped_value : out STD_LOGIC_VECTOR(6 downto 0));
+end Potentiometer_ADC;
+
+architecture Behavioral of Potentiometer_ADC is
+    signal adc_value : natural range 0 to 255;
+    signal mapped_output : natural range 0 to 70;
+begin
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            -- Convert the potentiometer signal to a natural number (0 to 255)
+            adc_value <= to_integer(unsigned(pot_signal));
+            
+            -- Map the ADC value to the desired range (0 to 70)
+            mapped_output <= mapped_output * 70 / 255;
+            
+            -- Assign the mapped value to the output port
+            mapped_value <= std_logic_vector(to_unsigned(mapped_output, 7));
+        end if;
+    end process;
+end Behavioral;

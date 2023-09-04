@@ -1,0 +1,389 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK'
+Slack : -4.957
+TNS   : -829.126
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : -1.956
+TNS   : -7.940
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : -1.710
+TNS   : -6.262
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : -1.694
+TNS   : -5.201
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : -1.689
+TNS   : -7.665
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : -1.606
+TNS   : -6.120
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : -1.302
+TNS   : -9.327
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : -1.266
+TNS   : -19.663
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK'
+Slack : -0.229
+TNS   : -2.121
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : 0.441
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : 0.644
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : 0.649
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : 0.764
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK'
+Slack : -2.225
+TNS   : -477.887
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : -0.394
+TNS   : -11.255
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : -0.394
+TNS   : -4.096
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : -0.394
+TNS   : -3.198
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : -0.394
+TNS   : -3.186
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : -0.394
+TNS   : -2.575
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : -0.394
+TNS   : -2.545
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : -0.394
+TNS   : -2.040
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK'
+Slack : -4.776
+TNS   : -798.142
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : -1.955
+TNS   : -8.083
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : -1.707
+TNS   : -5.269
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : -1.692
+TNS   : -6.368
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : -1.681
+TNS   : -7.712
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : -1.664
+TNS   : -6.171
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : -1.317
+TNS   : -9.418
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : -1.219
+TNS   : -18.951
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK'
+Slack : 0.002
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : 0.514
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : 0.572
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : 0.620
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : 0.665
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : 0.732
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK'
+Slack : -2.225
+TNS   : -462.902
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : -0.394
+TNS   : -11.219
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : -0.394
+TNS   : -4.160
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : -0.394
+TNS   : -3.192
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : -0.394
+TNS   : -3.146
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : -0.394
+TNS   : -2.565
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : -0.394
+TNS   : -2.560
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : -0.394
+TNS   : -2.052
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK'
+Slack : -3.171
+TNS   : -368.218
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : -1.058
+TNS   : -3.181
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : -1.030
+TNS   : -2.664
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : -1.004
+TNS   : -2.253
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : -0.895
+TNS   : -2.344
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : -0.884
+TNS   : -2.914
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : -0.593
+TNS   : -8.556
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : -0.475
+TNS   : -3.168
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK'
+Slack : -0.072
+TNS   : -0.504
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : 0.033
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : 0.050
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : 0.066
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : 0.113
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : 0.333
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK'
+Slack : -2.174
+TNS   : -393.099
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : 0.108
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : 0.150
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : 0.150
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK'
+Slack : -2.636
+TNS   : -310.186
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : -0.983
+TNS   : -2.782
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : -0.932
+TNS   : -2.300
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : -0.931
+TNS   : -1.969
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : -0.837
+TNS   : -2.092
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : -0.819
+TNS   : -2.524
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : -0.476
+TNS   : -6.808
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : -0.411
+TNS   : -2.724
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK'
+Slack : -0.011
+TNS   : -0.077
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : 0.013
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : 0.024
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : 0.040
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : 0.095
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : 0.366
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK'
+Slack : -2.174
+TNS   : -423.292
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_1Mhz_int'
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_100hz_int'
+Slack : 0.119
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_10hz_int'
+Slack : 0.129
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_1Khz_int'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|CLOCK_100Hz'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_100Khz_int'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_DIV_50:inst10|clock_10Khz_int'
+Slack : 0.150
+TNS   : 0.000
+
+------------------------------------------------------------

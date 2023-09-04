@@ -1,0 +1,1569 @@
+/*<simulation_settings>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off PROYECTO -c PROYECTO --vector_source="C:/PROYECTO7/Waveform5.vwf" --testbench_file="C:/PROYECTO7/simulation/qsim/Waveform5.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off PROYECTO -c PROYECTO --vector_source="C:/PROYECTO7/Waveform5.vwf" --testbench_file="C:/PROYECTO7/simulation/qsim/Waveform5.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/PROYECTO7/simulation/qsim/" PROYECTO -c PROYECTO</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/PROYECTO7/simulation/qsim/" PROYECTO -c PROYECTO</tnetlist_cmd>
+<modelsim_script>onerror {exit -code 1}
+vlib work
+vcom -work work PROYECTO.vho
+vcom -work work Waveform5.vwf.vht
+vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.PROYECTO_vhd_vec_tst
+vcd file -direction PROYECTO.msim.vcd
+vcd add -internal PROYECTO_vhd_vec_tst/*
+vcd add -internal PROYECTO_vhd_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f
+</modelsim_script>
+<modelsim_script_timing>onerror {exit -code 1}
+vlib work
+vcom -work work PROYECTO.vho
+vcom -work work Waveform5.vwf.vht
+vsim -novopt -c -t 1ps -sdfmax PROYECTO_vhd_vec_tst/i1=PROYECTO_vhd.sdo -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.PROYECTO_vhd_vec_tst
+vcd file -direction PROYECTO.msim.vcd
+vcd add -internal PROYECTO_vhd_vec_tst/*
+vcd add -internal PROYECTO_vhd_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f
+</modelsim_script_timing>
+<hdl_lang>vhdl</hdl_lang>
+</simulation_settings>*/
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 1000.0;
+	SIMULATION_TIME = 0.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("clk")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Resetn")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("EnSensor1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("EnSensor2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Sensor1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 7;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Sensor1[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor1";
+}
+
+SIGNAL("Sensor1[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor1";
+}
+
+SIGNAL("Sensor1[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor1";
+}
+
+SIGNAL("Sensor1[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor1";
+}
+
+SIGNAL("Sensor1[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor1";
+}
+
+SIGNAL("Sensor1[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor1";
+}
+
+SIGNAL("Sensor1[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor1";
+}
+
+SIGNAL("Sensor2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 7;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Sensor2[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor2";
+}
+
+SIGNAL("Sensor2[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor2";
+}
+
+SIGNAL("Sensor2[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor2";
+}
+
+SIGNAL("Sensor2[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor2";
+}
+
+SIGNAL("Sensor2[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor2";
+}
+
+SIGNAL("Sensor2[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor2";
+}
+
+SIGNAL("Sensor2[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Sensor2";
+}
+
+SIGNAL("T_sensor")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 7;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("T_sensor[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "T_sensor";
+}
+
+SIGNAL("T_sensor[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "T_sensor";
+}
+
+SIGNAL("T_sensor[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "T_sensor";
+}
+
+SIGNAL("T_sensor[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "T_sensor";
+}
+
+SIGNAL("T_sensor[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "T_sensor";
+}
+
+SIGNAL("T_sensor[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "T_sensor";
+}
+
+SIGNAL("T_sensor[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "T_sensor";
+}
+
+SIGNAL("nivel_sensor")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 7;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("nivel_sensor[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "nivel_sensor";
+}
+
+SIGNAL("nivel_sensor[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "nivel_sensor";
+}
+
+SIGNAL("nivel_sensor[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "nivel_sensor";
+}
+
+SIGNAL("nivel_sensor[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "nivel_sensor";
+}
+
+SIGNAL("nivel_sensor[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "nivel_sensor";
+}
+
+SIGNAL("nivel_sensor[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "nivel_sensor";
+}
+
+SIGNAL("nivel_sensor[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "nivel_sensor";
+}
+
+SIGNAL("alta")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("lleno")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("baja")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("EnH")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("LdH")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("EnReloj")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("time_Actual")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 5;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("time_Actual[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "time_Actual";
+}
+
+SIGNAL("time_Actual[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "time_Actual";
+}
+
+SIGNAL("time_Actual[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "time_Actual";
+}
+
+SIGNAL("time_Actual[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "time_Actual";
+}
+
+SIGNAL("time_Actual[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "time_Actual";
+}
+
+TRANSITION_LIST("clk")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 50;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Resetn")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 950.0;
+	}
+}
+
+TRANSITION_LIST("EnSensor1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 250.0;
+	}
+}
+
+TRANSITION_LIST("EnSensor2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 250.0;
+	}
+}
+
+TRANSITION_LIST("Sensor1[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 570.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Sensor1[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 170.0;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 170.0;
+	}
+}
+
+TRANSITION_LIST("Sensor1[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 330.0;
+		LEVEL 0 FOR 340.0;
+		LEVEL 1 FOR 320.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Sensor1[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 170.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 170.0;
+		LEVEL 1 FOR 70.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Sensor1[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 170.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 250.0;
+	}
+}
+
+TRANSITION_LIST("Sensor1[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 330.0;
+		LEVEL 1 FOR 340.0;
+		LEVEL 0 FOR 90.0;
+		LEVEL 1 FOR 70.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Sensor1[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 760.0;
+	}
+}
+
+TRANSITION_LIST("Sensor2[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 340.0;
+		LEVEL 0 FOR 170.0;
+		LEVEL 1 FOR 260.0;
+		LEVEL 0 FOR 70.0;
+	}
+}
+
+TRANSITION_LIST("Sensor2[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 340.0;
+		LEVEL 1 FOR 170.0;
+		LEVEL 0 FOR 330.0;
+	}
+}
+
+TRANSITION_LIST("Sensor2[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 170.0;
+		LEVEL 1 FOR 170.0;
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 110.0;
+		LEVEL 0 FOR 70.0;
+	}
+}
+
+TRANSITION_LIST("Sensor2[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 740.0;
+		LEVEL 0 FOR 180.0;
+	}
+}
+
+TRANSITION_LIST("Sensor2[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 510.0;
+		LEVEL 1 FOR 150.0;
+		LEVEL 0 FOR 180.0;
+	}
+}
+
+TRANSITION_LIST("Sensor2[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 330.0;
+		LEVEL 1 FOR 170.0;
+		LEVEL 0 FOR 170.0;
+		LEVEL 1 FOR 150.0;
+		LEVEL 0 FOR 180.0;
+	}
+}
+
+TRANSITION_LIST("Sensor2[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 820.0;
+		LEVEL 1 FOR 110.0;
+		LEVEL 0 FOR 70.0;
+	}
+}
+
+TRANSITION_LIST("T_sensor[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("T_sensor[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("T_sensor[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("T_sensor[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("T_sensor[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("T_sensor[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("T_sensor[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("nivel_sensor[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("nivel_sensor[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("nivel_sensor[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("nivel_sensor[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("nivel_sensor[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("nivel_sensor[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("nivel_sensor[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("alta")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("lleno")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("baja")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("EnH")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 25.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 25.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 125.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 25.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 125.0;
+		LEVEL 0 FOR 25.0;
+		LEVEL 1 FOR 25.0;
+		LEVEL 0 FOR 25.0;
+		LEVEL 1 FOR 25.0;
+		LEVEL 0 FOR 25.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 25.0;
+		LEVEL 0 FOR 25.0;
+	}
+}
+
+TRANSITION_LIST("LdH")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 390.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 510.0;
+	}
+}
+
+TRANSITION_LIST("EnReloj")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 150.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 70.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("time_Actual[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("time_Actual[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("time_Actual[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("time_Actual[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("time_Actual[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clk";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Resetn";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "EnSensor1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "EnSensor2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+	CHILDREN = 5, 6, 7, 8, 9, 10, 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor1[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor1[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor1[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor1[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor1[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor1[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor1[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 0;
+	CHILDREN = 13, 14, 15, 16, 17, 18, 19;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor2[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 1;
+	PARENT = 12;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor2[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 1;
+	PARENT = 12;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor2[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 1;
+	PARENT = 12;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor2[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 1;
+	PARENT = 12;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor2[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 1;
+	PARENT = 12;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor2[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 1;
+	PARENT = 12;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Sensor2[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 19;
+	TREE_LEVEL = 1;
+	PARENT = 12;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "T_sensor";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 20;
+	TREE_LEVEL = 0;
+	CHILDREN = 21, 22, 23, 24, 25, 26, 27;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "T_sensor[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 21;
+	TREE_LEVEL = 1;
+	PARENT = 20;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "T_sensor[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 22;
+	TREE_LEVEL = 1;
+	PARENT = 20;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "T_sensor[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 23;
+	TREE_LEVEL = 1;
+	PARENT = 20;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "T_sensor[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 24;
+	TREE_LEVEL = 1;
+	PARENT = 20;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "T_sensor[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 25;
+	TREE_LEVEL = 1;
+	PARENT = 20;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "T_sensor[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 26;
+	TREE_LEVEL = 1;
+	PARENT = 20;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "T_sensor[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 27;
+	TREE_LEVEL = 1;
+	PARENT = 20;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nivel_sensor";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 28;
+	TREE_LEVEL = 0;
+	CHILDREN = 29, 30, 31, 32, 33, 34, 35;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nivel_sensor[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 29;
+	TREE_LEVEL = 1;
+	PARENT = 28;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nivel_sensor[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 30;
+	TREE_LEVEL = 1;
+	PARENT = 28;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nivel_sensor[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 31;
+	TREE_LEVEL = 1;
+	PARENT = 28;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nivel_sensor[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 32;
+	TREE_LEVEL = 1;
+	PARENT = 28;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nivel_sensor[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 33;
+	TREE_LEVEL = 1;
+	PARENT = 28;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nivel_sensor[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 34;
+	TREE_LEVEL = 1;
+	PARENT = 28;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nivel_sensor[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 35;
+	TREE_LEVEL = 1;
+	PARENT = 28;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "lleno";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 36;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "alta";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 37;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "baja";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 38;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "EnH";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 39;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "LdH";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 40;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "EnReloj";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 41;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "time_Actual";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 42;
+	TREE_LEVEL = 0;
+	CHILDREN = 43, 44, 45, 46, 47;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "time_Actual[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 43;
+	TREE_LEVEL = 1;
+	PARENT = 42;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "time_Actual[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 44;
+	TREE_LEVEL = 1;
+	PARENT = 42;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "time_Actual[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 45;
+	TREE_LEVEL = 1;
+	PARENT = 42;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "time_Actual[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 46;
+	TREE_LEVEL = 1;
+	PARENT = 42;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "time_Actual[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 47;
+	TREE_LEVEL = 1;
+	PARENT = 42;
+}
+
+TIME_BAR
+{
+	TIME = 0;
+	MASTER = TRUE;
+}
+;

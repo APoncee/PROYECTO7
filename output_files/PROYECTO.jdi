@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="205e279d307120c5965d"/>
+  </project>
+  <file_info>
+    <file device="5CSXFC6D6F31C6" path="PROYECTO.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="ADC1:inst40" name="inst40">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME ADC1 HAS_SOPCINFO 1 GENERATION_ID 1693255998"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

@@ -1,0 +1,79 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity mss is
+	port(reset, clock, Start, Load, Lleno, Alta, Baja, Tsen_may_Tope, Tsen_men_Tope: in std_logic;
+		completado, cnt15, cargarRAM, consultar, finalizar: in std_logic;
+		EnReg1, EnReg2, EnReg3, EnReg4, Error, no_llenar, EnCnt, LdCnt, Alarma, wr: out std_logic;
+		EnCritico, valvula_ON, valvula_OFF, Evento, finalizar, temp_alta, temp_baja: out std_logic;
+		EnSensor1, EnSensor2, EnReloj, FIN: out std_logic);
+end mss;
+
+architecture comportamiento of mss is 
+	type estado is (TAA, TAB, TAC, TAD, TAE, TAF, TAG, TAH, TAI,TAJ, TAK, TAL, TAM, TAN, TAO, TAP, TAQ, TAR, TAS,
+					TAT, TAU, TAV, TAW);
+	signal y:estado;
+begin
+	mss_transiciones: process(reset, clock)
+	begin
+		if reset='0' then y<=a;
+		elsif clock 'event and clock='1' then
+			case y is 
+				when TAA => if (Start='0' and Load='0') then y <= TAA; else y <= TAB; end if;
+				when TAB => y <= TAA;
+				when TAC => if Start='0' then y <= TAD; else y <= TAC; end if;
+				when TAD => y <= TAE;
+				when TAE => if Lleno='0' then y <= TAG; else y <= TAF; end if;
+				when TAF => y <= TAG;
+				when TAG => if (Alta='0' and Baja='0') then y <= TAS; elsif (Alta='0' and Baja='1') then y <= TAI; else y <= TAH; end if;
+				when TAH => y <= TAJ;
+				when TAI => y <= TAJ;
+				when TAJ => y <= TAK;
+				when TAK => if (cnt15='0' and cargarRAM='0') then y <= TAK; elsif (cnt15='0' and cargarRAM='1') then y <= TAL; else y <= TAN; end if;
+				when TAL => y <= TAM;
+				when TAM => y <= TAS;
+				when TAN => y <= TAO;
+				when TAO => if (cnt15='0' and consultar='0') then y <= TAP; elsif (cnt15='0' and consultar='1') then y <= TAQ; else y <= TAR; end if;
+				when TAP => y <= TAO;
+				when TAQ => y <= TAP;
+				when TAR => if (completado='1' and finalizar='1') then y <= TAW; else y <= TAS; end if;
+				when TAS => if (Tsen_may_Tope='0' and Tsen_men_Tope='0') then y <= TAD; elsif (Tsen_may_Tope='0' and Tsen_men_Tope='1') then y <= TAU; else y <= TAT; end if;
+				when TAT => y <= TAV;
+				when TAU => y <= TAV;
+				when TAV => y <= TAD;
+				when TAW => y <= TAA;
+				
+			end case;
+		end if;
+	end process;
+
+	mss_salidas: process (y)
+	begin
+	EnReg1<='0'; EnReg2<='0'; EnReg3<='0'; EnReg4<='0'; Error<='0'; no_llenar<='0'; EnCnt<='0' LdCnt<='0'; Alarma<='0'; wr<='0'; EnCritico<='0'; valvula_ON<='0' valvula_OFF<='0'; Evento<='0'; finalizar<='0'; temp_alta<='0'; temp_baja<='0'; EnSensor1<='0'; EnSensor2<='0'; EnReloj<='0'; 
+		case y is
+			when TAA => EnCnt <= '1'; LdCnt <= '1';
+			when TAB => EnReg1 <= '1'; EnReg2 <= '1'; EnReg3 <= '1'; EnReg4 <= '1';
+			when TAC => 
+			when TAD => EnReloj <= '1';
+			when TAE => EnSensor1 <= '1'; EnSensor2 <= '1';
+			when TAF => Error <= '1'; no_llenar <= '1';
+			when TAG => 
+			when TAH => Error <= '1'; Alarma <= '1'; temp_alta <= '1';
+			when TAI => Error <= '1'; Alarma <= '1'; temp_baja <= '1';
+			when TAJ => 
+			when TAK => Evento <= '1';
+			when TAL => wr <= '1';
+			when TAM => EnCnt <= '1';
+			when TAN => EnCnt <= '1'; LdCnt <= '1';
+			when TAO => 
+			when TAP => EnCnt <= '1';
+			when TAQ => EnCritico <= '1';
+			when TAR => 
+			when TAS => 
+			when TAT => valvula_ON <= '1';
+			when TAU => valvula_OFF <= '1';
+			when TAV => 
+			when TAW => FIN <= '1';
+		end case;
+	end process;
+end comportamiento;
